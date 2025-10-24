@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/impactGFF/static/css/main.26e338ad.css",
+    "main.js": "/impactGFF/static/js/main.b1564e1a.js",
+    "index.html": "/impactGFF/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.26e338ad.css",
+    "static/js/main.b1564e1a.js"
+  ]
+}
