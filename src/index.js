@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
+// Import components
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Clients from './pages/Clients';
+import Contact from './pages/Contact';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Import global styles
 import './styles/App.css';
@@ -13,12 +22,46 @@ import reportWebVitals from './reportWebVitals';
 // Create root element
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Create the App component directly in index.js
+function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Minimal loading time for better UX
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
+  return (
+    <div className="App">
+      <Header />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 // Render the app
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/impactGFF' : '/'}>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
@@ -32,9 +75,9 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
     const NextApp = require('./App').default;
     root.render(
       <React.StrictMode>
-        <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/impactGFF' : '/'}>
+        <HashRouter>
           <NextApp />
-        </BrowserRouter>
+        </HashRouter>
       </React.StrictMode>
     );
   });
