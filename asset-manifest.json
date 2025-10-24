@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/impactGFF/static/css/main.26e338ad.css",
-    "main.js": "/impactGFF/static/js/main.adf52599.js",
-    "static/js/206.6004d7ba.chunk.js": "/impactGFF/static/js/206.6004d7ba.chunk.js",
-    "index.html": "/impactGFF/index.html"
+    "main.css": "/index.js/static/css/main.26e338ad.css",
+    "main.js": "/index.js/static/js/main.8a3dcfe3.js",
+    "static/js/206.6004d7ba.chunk.js": "/index.js/static/js/206.6004d7ba.chunk.js",
+    "index.html": "/index.js/index.html"
   },
   "entrypoints": [
     "static/css/main.26e338ad.css",
-    "static/js/main.adf52599.js"
+    "static/js/main.8a3dcfe3.js"
   ]
 }
