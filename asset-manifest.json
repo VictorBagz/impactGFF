@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/impactGFF/static/css/main.26e338ad.css",
-    "main.js": "/impactGFF/static/js/main.bdce05c5.js",
+    "main.js": "/impactGFF/static/js/main.adf52599.js",
     "static/js/206.6004d7ba.chunk.js": "/impactGFF/static/js/206.6004d7ba.chunk.js",
     "index.html": "/impactGFF/index.html"
   },
   "entrypoints": [
     "static/css/main.26e338ad.css",
-    "static/js/main.bdce05c5.js"
+    "static/js/main.adf52599.js"
   ]
 }
